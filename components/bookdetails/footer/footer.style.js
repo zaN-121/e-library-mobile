@@ -17,8 +17,6 @@ const styles = StyleSheet.create({
   likeBtn: {
     width: 55,
     height: 55,
-    borderWidth: 1,
-    borderColor: "#F37453",
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
@@ -32,6 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FE7654",
     height: "100%",
+    width: "100%",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: SIZES.medium,

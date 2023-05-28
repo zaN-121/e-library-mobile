@@ -90,13 +90,10 @@ const BookDetails = () => {
           headerBackVisible: false,
           headerLeft: () => (
             <ScreenHeaderBtn
-              iconUrl={icons.left}
+              iconUrl={'https://cdn-icons-png.flaticon.com/512/271/271218.png'}
               dimension='60%'
               handlePress={() => router.back()}
             />
-          ),
-          headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.share} dimension='60%' />
           ),
           headerTitle: "",
         }}

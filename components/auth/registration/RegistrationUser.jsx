@@ -75,7 +75,7 @@ const Registration = () =>{
                 keyboard={'numeric'}
                 />
                 <FormButton
-                label={"Registration"}
+                label={"Register"}
                 onClick={handleRegister}
                 />
                 <Text style={styles.link}>Already have an account?<Text onPress={()=> route.push('login')}> click here</Text></Text>

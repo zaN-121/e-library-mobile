@@ -6,8 +6,8 @@ import {
   FlatList,
 } from "react-native";
 
-import styles from "./popularjobs.style";
-import PopularJobCard from "../../common/cards/popular/PopularJobCard";
+import styles from "./AvailableBook.style";
+import PopularJobCard from "../../common/cards/availableBook/AvailableBook";
 import useFetch from "../../../hook/useFetch";
 import AnimatedLottieView from "lottie-react-native";
 import { SIZES } from "../../../constants";

@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import styles from "./recommendbook.style";
+import styles from "./latestbook.style";
 import { checkImageURL } from "../../../../utils";
 
 const RecommendBookCard = ({ book, handleNavigate }) => {
@@ -19,11 +19,11 @@ const RecommendBookCard = ({ book, handleNavigate }) => {
       </TouchableOpacity>
 
       <View style={styles.textContainer}>
-        <Text style={styles.jobName} numberOfLines={1}>
+        <Text style={styles.borrowName} numberOfLines={1}>
           {book?.name}
         </Text>
 
-        <Text style={styles.jobType}>{book?.author}</Text>
+        <Text style={styles.borrowType}>{book?.author}</Text>
       </View>
     </TouchableOpacity>
   );

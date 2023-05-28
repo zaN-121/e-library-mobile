@@ -25,10 +25,10 @@ const Login = () => {
                 router.push('home')
             }
             else{
-                alert('Login Failed')
+                alert('In')
             }
         }).catch(err=>{
-            alert('Login Failed')
+            alert('Incorrect username or passoword')
             console.error(err)
         })
     }
@@ -59,7 +59,7 @@ const Login = () => {
                 placeholder={'Enter your password'}
                 />
                 </View>
-                <FormButton label={'login'} onClick={handleLogin}/>
+                <FormButton label={'Sign In'} onClick={handleLogin}/>
                 <Text style={styles.link}>Don't have an account? </Text>
                 <Text onPress={()=> router.push('regist')} style={styles.link}>Create Account</Text>
             </View>
