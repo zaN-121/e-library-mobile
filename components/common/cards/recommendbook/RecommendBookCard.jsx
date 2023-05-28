@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./recommendbook.style";
 import { checkImageURL } from "../../../../utils";
 
-const NearbyJobCard = ({ book, handleNavigate }) => {
+const RecommendBookCard = ({ book, handleNavigate }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={handleNavigate}>
       <TouchableOpacity style={styles.logoContainer}>
@@ -29,4 +29,4 @@ const NearbyJobCard = ({ book, handleNavigate }) => {
   );
 };
 
-export default NearbyJobCard;
+export default RecommendBookCard;

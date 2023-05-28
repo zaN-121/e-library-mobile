@@ -3,7 +3,8 @@ import { View, Text, TouchableOpacity, Image, Linking } from "react-native";
 import styles from "./footer.style";
 import { icons } from "../../../constants";
 
-const Footer = ({ url }) => {
+const Footer = ({onPress}) => {
+ 
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.likeBtn}>
@@ -16,7 +17,7 @@ const Footer = ({ url }) => {
 
       <TouchableOpacity
         style={styles.applyBtn}
-        onPress={() => Linking.openURL(url)}
+        onPress={onPress}
       >
         <Text style={styles.applyBtnText}>Borrow Book</Text>
       </TouchableOpacity>

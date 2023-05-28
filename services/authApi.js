@@ -1,12 +1,13 @@
 import Api from "../api/api";
 
+
 export const userLogin = async data => {
     try {
         const result = await Api('/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                "Accept":'application/json'
+                "Accept":'application/json',
             },
             data: data
         })

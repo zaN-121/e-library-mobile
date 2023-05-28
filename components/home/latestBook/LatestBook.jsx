@@ -10,12 +10,13 @@ import AnimatedLottieView from "lottie-react-native";
 const RecommendBook = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("book", {
-    size: 30
+    size: 10
   });
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Recommend Books</Text>
+        <Text style={styles.headerTitle}>Latest Update</Text>
       </View>
 
       <View style={styles.cardsContainer}>
@@ -31,7 +32,6 @@ const RecommendBook = () => {
           data?.map((book) => (
             <RecommendBookCard
               book={book}
-              key={`recommend-book-${book.bookId}`}
               handleNavigate={() => router.push(`/book-details/${book.bookId}`)}
             />
           ))

@@ -10,24 +10,27 @@ import styles from "./popularjobs.style";
 import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 import useFetch from "../../../hook/useFetch";
 import AnimatedLottieView from "lottie-react-native";
+import { SIZES } from "../../../constants";
+
 
 const Popularjobs = () => {
   const router = useRouter();
   const { data, isLoading, error } = useFetch("book", {
-    size: 20,
+    sortBy: 'stock',
+    size: 10,
   });
 
   const [selectedBook, setSelectedBook] = useState();
 
   const handleCardPress = (item) => {
-    router.push(`/book-details/${item.book_id}`);
-    setSelectedBook(item.book_id);
+    router.push(`/book-details/${item.bookId}`);
+    setSelectedBook(item.bookId);
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Publication Year 2022</Text>
+        <Text style={styles.headerTitle}>Available Books</Text>
       </View>
 
       <View style={styles.cardsContainer}>
@@ -47,6 +50,7 @@ const Popularjobs = () => {
                 item={item}
                 selectedBook={selectedBook}
                 handleCardPress={handleCardPress}
+                
               />
             )}
             keyExtractor={(item) => item.book_id}
