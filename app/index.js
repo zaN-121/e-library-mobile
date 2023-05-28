@@ -1,11 +1,18 @@
-import {View, Text} from "react-native";
+import { Redirect } from "expo-router";
+import { useEffect, useState } from "react";
+import {checkToken, getToken, removeToken} from '../utils/token';
 
-const Home = () => {
-    return (
-        <View>
-            <Text>Home</Text>
-        </View>
-    )
+
+
+
+export default function Index() {
+    const [token, setToken]  = useState("")
+    useEffect(async () => {
+        setToken(await getToken()) 
+    }, [])
+    
+    useEffect(() => {
+        checkToken()
+    },[])
+    return <Redirect href={token ? 'home' : 'login'} />;
 }
-
-export default Home;
