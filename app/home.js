@@ -27,7 +27,7 @@ const Home = () => {
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: false,
           headerRight: () => (
-            <ScreenHeaderBtn handlePress={handlePress} iconUrl={data != null ? data.images : images.profile} dimension='100%' />
+            <ScreenHeaderBtn handlePress={handlePress} iconUrl={data.image != null ? data.image : 'https://cdn-icons-png.flaticon.com/512/1946/1946429.png'} dimension='100%' />
           ),
           headerTitle: "",
         }}

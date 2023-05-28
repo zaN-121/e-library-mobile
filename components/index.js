@@ -6,7 +6,7 @@ import Registration from "./auth/registration/RegistrationUser";
 // home screen
 import Welcome from "./home/welcome/Welcome";
 import RecommendBook from "./home/latestBook/LatestBook";
-import Popularjobs from "./home/popular/Popularjobs";
+import Popularjobs from "./home/availableBook/AvailableBook";
 
 // job details screen
 import { default as BookTabs } from "./bookdetails/tabs/Tabs";
@@ -14,7 +14,7 @@ import { default as BookAbout } from "./bookdetails/about/About";
 import { default as BookFooter } from "./bookdetails/footer/Footer";
 
 // common
-import RecommendBookCard from './common/cards/recommendbook/RecommendBookCard';
+import RecommendBookCard from './common/cards/latestBook/LatestBook';
 
 export {
   ScreenHeaderBtn,

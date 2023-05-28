@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import useFetchById from "../../../hook/useFetchById";
 import styles from "./borrowUser.style";
 import AnimatedLottieView from "lottie-react-native";
+import BorrowCard from "../../common/cards/borrowCard/borrowCard";
 
 const BorrowUser = () => {
 
@@ -10,13 +11,8 @@ const BorrowUser = () => {
     })
     return(
         <View style={styles.container}>
-        <View style={styles.row}>
-          <Text style={styles.header}>Borrowing Date</Text>
-          <Text style={styles.header}>Return Date</Text>
-          <Text style={styles.header}>Status</Text>
-          <Text style={styles.header}>Late Charge</Text>
-        </View>
-        <View>
+        <View style={styles.cardsContainer}>
+            <Text style={styles.text}>My Borrowing</Text>
             {
                 isLoading ? (
                 <AnimatedLottieView
@@ -28,12 +24,9 @@ const BorrowUser = () => {
                     <Text>Something went wrong</Text>
                 ) : (
                     data?.map((item)=> (
-                        <View style={styles.row}>
-                            <Text>{item.borrowingDate}</Text>
-                            <Text>{item.returnDate}</Text>
-                            <Text>{item.borrowState}</Text>
-                            <Text>{item.lateCharge}</Text>
-                        </View>
+                        <BorrowCard
+                        data={item}
+                        />
                     ))
                 )
             }

@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import styles from "./popularjobcard.style";
+import styles from "./availablebook.style";
 import { checkImageURL } from "../../../../utils";
 
 const PopularJobCard = ({ item, selectedBook, handleCardPress }) => {

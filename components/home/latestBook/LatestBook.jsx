@@ -2,8 +2,8 @@ import React from "react";
 import { useRouter } from "expo-router";
 import { View, Text, TouchableOpacity, ActivityIndicator } from "react-native";
 
-import styles from "./recommendbook.style";
-import RecommendBookCard from "../../common/cards/recommendbook/RecommendBookCard";
+import styles from "./latestBook.style";
+import RecommendBookCard from "../../common/cards/latestBook/LatestBook";
 import useFetch from "../../../hook/useFetch";
 import AnimatedLottieView from "lottie-react-native";
 
